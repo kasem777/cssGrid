@@ -1,0 +1,71 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.gird-container {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.5fr;
+  grid-template-rows: 1fr 4fr 3fr 2fr;
+  grid-template-areas:
+    "main    main   header"
+    "main    main   candy"
+    "nom     yum    candy"
+    "footer footer  candy";
+  height: 100vh;
+  margin: 2rem;
+}
+
+main {
+  /* grid-column: 1 / 3;
+  grid-row: 1 / 3; */
+  /* grid-area: 
+          grid-rowStart / grid-columnStart /  grid-rowEnd / grid-columnEnd; */
+  /* grid-area: 1 / 1 / 3 / 3; */
+  grid-area: main;
+  background: #fffadf;
+  text-align: center;
+  color: red;
+  font-size: 2rem;
+}
+
+section.nom {
+  /* grid-column: 1 / 3;
+  grid-row: 1 / 3; */
+  grid-area: nom;
+  background: #c4b35a;
+  text-align: center;
+  font-size: 2rem;
+}
+
+section.yum {
+  grid-area: yum;
+  background: #333333;
+  color: whitesmoke;
+  text-align: center;
+  font-size: 2rem;
+}
+
+section.diabeetus {
+  grid-area: footer;
+  background: #202020;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+header {
+  grid-area: header;
+  color: #ff4800;
+  font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.candy {
+  grid-area: candy;
+  background: url(https://images.unsplash.com/photo-1612217999465-152e0588a32e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-size: cover;
+  text-align: center;
+  font-size: 2rem;
+}
